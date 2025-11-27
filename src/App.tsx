@@ -9,9 +9,8 @@ function App() {
     const [count, setCount] = React.useState<number>(0);
 
     const incCount = () => {
-        let newCount = count;
         if (count === 5) return;
-        setCount(newCount + 1);
+        setCount((prevState)=> prevState + 1);
     }
     const resetCount = () => {
         if (count !== 0) {
