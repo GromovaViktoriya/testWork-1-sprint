@@ -6,11 +6,12 @@ import styled from "styled-components";
 
 
 function App() {
-    let [count, setCount] = React.useState<number>(0);
+    const [count, setCount] = React.useState<number>(0);
 
     const incCount = () => {
+        let newCount = count;
         if (count === 5) return;
-        setCount(count + 1);
+        setCount(newCount + 1);
     }
     const resetCount = () => {
         if (count !== 0) {
